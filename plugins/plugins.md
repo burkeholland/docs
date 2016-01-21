@@ -31,7 +31,7 @@ A NativeScript plugin is any npm package, published or not, that exposes a nativ
 * A `package.json` file which contains the following metadata: name, version, supported runtime versions, dependencies and others. For more information, see the [Package.json Specification](#packagejson-specification) section.
 * One or more CommonJS modules that expose a native API via a unified JavaScript API. For more information about Common JS modules, see the [CommonJS Wiki](http://wiki.commonjs.org/wiki/CommonJS).
 * `AndroidManifest.xml` and `Info.plist` which describe the permissions, features or other configurations required or used by your app for Android and iOS, respectively.
-* (Optional) Native Android libraries and the native Android `include.gradle` configuration file which describes the native dependencies. See android specific structure [here]({% slug android-plugins-infrastructure% }).
+* (Optional) Native Android libraries and the native Android `include.gradle` configuration file which describes the native dependencies. See android specific structure [here]({% slug android-plugins-infrastructure%}).
 * (Optional) Native iOS dynamic libraries.
 
 The plugin must have the directory structure, described in the [Directory Structure](#directory-structure) section.
@@ -46,7 +46,7 @@ If the NativeScript framework does not expose a native API that you need, you ca
 * The plugin directory structure must comply with the specification described below.
 * The plugin must contain a valid `package.json` which complies with the specification described below.
 * If the plugin requires any permissions, features or other configuration specifics, it must contain `AndroidManifest.xml` and `Info.plist` file which describe them.
-* (Android-only) If the plugin depends on native libraries, it must contain a valid `include.gradle file`, which describes the dependencies. See android specific structure [here]({% slug android-plugins-infrastructure% }).
+* (Android-only) If the plugin depends on native libraries, it must contain a valid `include.gradle file`, which describes the dependencies. See android specific structure [here]({% slug android-plugins-infrastructure%}).
 
 ### Directory Structure
 
@@ -88,7 +88,7 @@ my-plugin/
 * `platforms/ios/Info.plist`: This file describes any specific configuration changes required for your plugin to work. For example: required permissions. For more information about the format of `Info.plist`, see [About Information Property List Files](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html).<br/>During the plugin installation, the NativeScript CLI will merge the plugin `Info.plist` with the `Info.plist` for your project. The NativeScript CLI will not resolve any contradicting or duplicate entries during the merge. After the plugin is installed, you need to manually resolve such issues.
 * `platforms/ios/Podfile`: This file describes the dependency to the library that you want to use. For more information, see [the CocoaPods article](CocoaPods.md).
 
-NativeScript plugins can contain both native Android and iOS libraries. See android specific structure [here]({% slug android-plugins-infrastructure% }).
+NativeScript plugins can contain both native Android and iOS libraries. See android specific structure [here]({% slug android-plugins-infrastructure%}).
 
 ```
 my-plugin/
